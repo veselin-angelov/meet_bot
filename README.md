@@ -13,6 +13,6 @@ Instructions to run:
     - python3 meet_bot.py  
 
 NOTE:  
-  You must have chromedriver installed on your system.  
-  Download here: https://chromedriver.chromium.org/  
-  Instructions - decompress the .zip file and move the file to usr/local/bin  
+    You must have chromedriver installed on your system.  
+    Download here: https://chromedriver.chromium.org/  
+    Instructions - decompress the .zip file and move the file to usr/local/bin  
