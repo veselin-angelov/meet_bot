@@ -4,8 +4,8 @@ from selenium.webdriver.chrome.options import Options
 import schedule
 from time import sleep
 
-join_time = "17:40"
-leave_time = "19:00"
+join_time = "17:41"
+leave_time = "18:54"
 
 class MeetBot():
     def __init__(self):
@@ -44,8 +44,8 @@ class MeetBot():
         close_popup.click()
 
     
-    def go_to_meet(self):
-        self.driver.get(meet)
+    def go_to_meet(self, meet_link):
+        self.driver.get(meet_link)
         sleep(2)
         mute_btn = self.driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div/div[4]/div[3]/div/div[2]/div/div[1]/div[4]/div[1]/div/div/div')
         mute_btn.click()
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     bot = MeetBot()
     bot.login()
     sleep(5)
-    bot.go_to_meet()
+    bot.go_to_meet(meet)
     schedule.every().day.at(join_time).do(bot.join_meet)
     schedule.every().day.at(leave_time).do(bot.driver.quit)
     while True:
