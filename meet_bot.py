@@ -69,8 +69,8 @@ if __name__ == '__main__':
     bot.login()
     sleep(5)
     bot.go_to_meet()
-    schedule.every().day.at("14:17").do(bot.join_meet)
-    schedule.every().day.at("14:18").do(bot.driver.quit)
+    schedule.every().day.at(join_time).do(bot.join_meet)
+    schedule.every().day.at(leave_time).do(bot.driver.quit)
     while True:
         schedule.run_pending()
         sleep(1)
